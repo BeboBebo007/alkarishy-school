@@ -28,27 +28,42 @@
     <title>مدرسة الوعي المتكامل – ALK-🜂-2025</title>
 
     <style>
-    margin: 0;
+        body {
+            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(140deg, #0c0c10, #151826, #1d2438);
             color: #ececec;
             line-height: 1.9;
             text-align: center;
         }
-        header {
-            padding: 80px 20px;
+
+        /* الهيدر بالصورة */
+        header img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-bottom: 2px solid #f5d37a;
+            border-radius: 0 0 10px 10px;
         }
-        h1 {
-            font-size: 2.7rem;
-            margin-bottom: 15px;
-            color: #f5d37a;
-            letter-spacing: 1px;
-        }
+
+        /* العنوان بعد الصورة */
         .symbol {
             font-size: 3.4rem;
             color: #f5d37a;
-            margin-bottom: 20px;
+            margin-top: 25px;
         }
+        h1 {
+            font-size: 2.7rem;
+            margin-bottom: 10px;
+            color: #f5d37a;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* القائمة */
         nav a {
             margin: 0 15px;
             color: #dcdcdc;
@@ -61,6 +76,7 @@
             border-bottom: 1px solid #f5d37a;
             color: #f5d37a;
         }
+
         footer {
             margin-top: 60px;
             padding: 20px;
@@ -71,22 +87,28 @@
 </head>
 <body>
 
+<!-- الهيدر بالصورة -->
 <header>
-    <div class="symbol">🜂</div>
-    <h1>مدرسة الوعي المتكامل</h1>
-    <p>المدرسة الرسمية للمشروع الفلسفي–العلمي–الروحي  
-       ALK-🜂-2025  
-    </p>
+    <img src="img/header.jpg" alt="مدرسة الوعي المتكامل – ALK-🜂-2025">
 </header>
 
+<!-- رمز المدرسة والعنوان الرئيسي -->
+<div class="symbol">🜂</div>
+<h1>مدرسة الوعي المتكامل</h1>
+<p>المدرسة الرسمية للمشروع الفلسفي–العلمي–الروحي  
+   <span style="color:#f5d37a;">ALK</span>-🜂-2025  
+</p>
+
+<!-- القائمة الرئيسية -->
 <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">عن المدرسة</a>
-    <a href="#">الكتب</a>
-    <a href="#">الأسفار</a>
-    <a href="#">التواصل</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن المدرسة</a>
+    <a href="books.html">الكتب</a>
+    <a href="scrolls.html">الأسفار</a>
+    <a href="contact.html">التواصل</a>
 </nav>
 
+<!-- الفوتر -->
 <footer>
     © 2025 ALKARISHY – School of Integrated Consciousness 🜂
 </footer>
