@@ -1,0 +1,94 @@
+/* =============================
+   ALK-Sentinel Prime — Royal Theme
+   Black-Gold Official Template
+   © 2025 Alkarishy — ALK 🜂
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+/* Golden Glow */
+:root {
+    --gold: #d4af37;
+}
+
+/* Background Star (ALK Five-Point Star) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vmin;
+    height: 70vmin;
+    background: url('https://i.imgur.com/8StqGNP.png') no-repeat center / contain;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+/* Header Logo */
+.header {
+    text-align: center;
+    padding: 80px 20px 20px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Subtitle */
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* Main Buttons */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.menu a {
+    width: 260px;
+    padding: 14px 30px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: 0.25s ease-in-out;
+    background: rgba(255,255,255,0.03);
+}
+
+.menu a:hover {
+    background: var(--gold);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    opacity: 0.4;
+    font-size: 0.9rem;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
