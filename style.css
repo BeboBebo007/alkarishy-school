@@ -1,91 +1,608 @@
-/* ======= CERTIFICATES ======= */
+/* =========================================================
+   style.css — ALK Integrated Consciousness School v1 (FULL)
+   Dark Cosmic + Gold ALK Identity — Mobile Friendly
+   ========================================================= */
 
-.section-certificates .cert-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 12px;
+* { box-sizing: border-box; }
+
+:root{
+  --bg-0:#050712;
+  --bg-1:#070a16;
+  --bg-2:#0b1530;
+  --bg-3:#0b2a46;
+
+  --panel: rgba(5, 7, 18, 0.92);
+  --panel-2: rgba(8, 10, 22, 0.92);
+
+  --text:#f5f5f5;
+  --muted: rgba(245,245,245,0.78);
+
+  --gold:#ffd700;
+  --gold-2:#ffb347;
+
+  --border: rgba(255,255,255,0.08);
+  --border-2: rgba(255,215,0,0.18);
 }
 
-.cert-card {
-  padding: 14px 12px;
-  border-radius: 12px;
-  background: radial-gradient(circle at top, rgba(255, 215, 0, 0.10), #050814);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+html { scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  padding:0;
+  font-family:"Tahoma","Arial",sans-serif;
+
+  /* ✅ مثل الصورة: تدرّج عمودي كوني */
+  background: linear-gradient(180deg,
+    var(--bg-0) 0%,
+    var(--bg-1) 22%,
+    var(--bg-2) 55%,
+    var(--bg-3) 72%,
+    var(--bg-0) 100%
+  );
+
+  color: var(--text);
+  line-height:1.8;
 }
 
-.cert-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header{
+  position: sticky;
+  top:0;
+  z-index:50;
+
+  background: rgba(5, 7, 18, 0.90);
+  border-bottom: 1px solid var(--border-2);
+  backdrop-filter: blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+
+  padding: 10px 18px;
 }
 
-.cert-card h3 {
-  margin: 0;
-  font-size: 1rem;
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-.body {
-    margin: 0;
-    padding: 0;
-    font-family: "Tahoma", "Arial", sans-serif;
-
-    /* ✅ مثل الصورة: تدرّج عمودي كوني (بدون radial قوي) */
-    background: linear-gradient(180deg,
-        #050712 0%,
-        #070a16 22%,
-        #0b1530 55%,
-        #0b2a46 72%,
-        #050712 100%
-    );
-
-    color: #f5f5f5;
-    line-height: 1.8;
+.logo-symbol{
+  position:relative;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border: 1px solid rgba(255,215,0,0.70);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
 
-.cert-desc {
-  margin: 10px 0 8px;
-  font-size: 0.9rem;
-  opacity: 0.95;
+.logo-symbol::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background: radial-gradient(circle, rgba(255,215,0,0.22), transparent 65%);
+  animation: sunPulse 6s infinite ease-in-out;
 }
 
-.cert-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 0.78rem;
-  opacity: 0.9;
+.logo-alk{
+  position:relative;
+  font-weight:800;
+  letter-spacing:0.08em;
+  font-size:1.1rem;
+  color: var(--gold);
 }
 
-.cert-meta span {
+.logo-sun{
+  position:absolute;
+  font-size:0.7rem;
+  bottom:4px;
+  left:7px;
+  opacity:0.8;
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.logo-title{
+  font-size:1.05rem;
+  font-weight:700;
+}
+
+.logo-subtitle{
+  font-size:0.78rem;
+  opacity:0.75;
+}
+
+.main-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.main-nav a{
+  color: var(--text);
+  text-decoration:none;
+  font-size:0.9rem;
+  padding: 6px 10px;
+  border-radius:999px;
+  border:1px solid transparent;
+}
+
+.main-nav a:hover{
+  border-color: rgba(255,215,0,0.6);
+  background: rgba(255,215,0,0.06);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero-section{
+  position:relative;
+  min-height:60vh;
+  padding: 70px 18px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:right;
+  overflow:hidden;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(circle at top, rgba(255,215,0,0.18), transparent 55%),
+    radial-gradient(circle at 60% 70%, rgba(52,152,219,0.20), transparent 62%);
+  opacity:0.95;
+  pointer-events:none;
+  animation: bgDrift 18s linear infinite alternate;
+}
+
+.hero-content{
+  position:relative;
+  max-width:850px;
+  z-index:1;
+}
+
+.hero-content h1{
+  font-size:1.9rem;
+  margin-bottom:12px;
+}
+
+.hero-content p{
+  font-size:1rem;
+  max-width:650px;
+  color: rgba(245,245,245,0.92);
+}
+
+.hero-buttons{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.btn{
+  display:inline-block;
+  padding: 8px 18px;
+  border-radius:999px;
+  font-size:0.9rem;
+  text-decoration:none;
+  cursor:pointer;
+  border:1px solid transparent;
+  user-select:none;
+}
+
+.btn.primary{
+  background: linear-gradient(90deg, var(--gold), var(--gold-2));
+  color: #2b2105;
+  font-weight:700;
+}
+
+.btn.primary:hover{ filter: brightness(1.06); }
+
+.btn.secondary{
+  border-color: rgba(255,215,0,0.6);
+  color: var(--gold);
+  background: rgba(0,0,0,0.30);
+}
+
+.btn.secondary:hover{
+  background: rgba(255,215,0,0.08);
+}
+
+.hero-meta{
+  margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:0.78rem;
+  opacity:0.92;
+}
+
+.hero-meta span{
   padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.20);
 }
 
-.cert-actions {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* =========================
+   SECTIONS GENERAL
+   ========================= */
+
+.site-main{
+  max-width:1100px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
 }
 
-/* ======= LINKS LIST ======= */
+.section-block{
+  margin-bottom:32px;
+  padding: 22px 18px;
 
-.link-list a {
-  color: #ffd700;
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(255, 215, 0, 0.4);
+  /* ✅ مثل الصورة: كتلة داكنة عميقة */
+  background: var(--panel);
+
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.06);
 }
 
-.link-list a:hover {
-  border-bottom-color: rgba(255, 215, 0, 0.9);
+.section-block h2{
+  margin-top:0;
+  font-size:1.3rem;
+  margin-bottom:12px;
+  border-right: 3px solid rgba(255,215,0,0.70);
+  padding-right:8px;
 }
 
-/* ======= Responsive Certificates ======= */
-@media (max-width: 800px) {
-  .section-certificates .cert-grid {
+.section-manifest p{
+  margin: 0 0 10px;
+}
+
+.section-manifest .founder{
+  margin-top:8px;
+  font-size:0.9rem;
+  opacity:0.90;
+}
+
+/* =========================
+   GRID SECTIONS
+   ========================= */
+
+.section-grid .grid-cards{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+}
+
+.card{
+  padding: 14px 12px;
+  border-radius:10px;
+  background: radial-gradient(circle at top, rgba(255,215,0,0.08), #050814);
+  border: 1px solid rgba(255,255,255,0.06);
+  font-size:0.9rem;
+}
+
+.card h3{
+  margin-top:0;
+  font-size:1rem;
+  margin-bottom:8px;
+}
+
+.card p{
+  margin-top:0;
+  margin-bottom:8px;
+}
+
+.card ul{
+  margin:0;
+  padding-right:20px;
+}
+
+/* PROJECT TAGS */
+.card.project{ position:relative; }
+
+.card .tag{
+  display:inline-block;
+  margin-top:4px;
+  font-size:0.78rem;
+  padding: 3px 8px;
+  border-radius:999px;
+  border: 1px solid rgba(255,215,0,0.70);
+  color: var(--gold);
+}
+
+/* =========================
+   LIBRARY
+   ========================= */
+
+.section-library .library-row{ margin-bottom:16px; }
+
+.section-library h3{
+  margin-bottom:6px;
+  font-size:1rem;
+}
+
+.section-library ul{
+  margin: 5px 0 0;
+  padding-right:20px;
+  font-size:0.9rem;
+}
+
+.section-library .private{
+  border-radius:10px;
+  border:1px dashed rgba(255,99,71,0.70);
+  background: rgba(60, 0, 10, 0.30);
+}
+
+.section-library .note{
+  font-size:0.8rem;
+  opacity:0.90;
+}
+
+/* =========================
+   CERTIFICATES
+   ========================= */
+
+.section-certificates .cert-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin-top:12px;
+}
+
+.cert-card{
+  padding: 14px 12px;
+  border-radius:12px;
+  background: radial-gradient(circle at top, rgba(255,215,0,0.10), #050814);
+  border:1px solid rgba(255,255,255,0.07);
+}
+
+.cert-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.cert-card h3{
+  margin:0;
+  font-size:1rem;
+}
+
+.cert-badge{
+  font-size:0.72rem;
+  padding: 4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,215,0,0.70);
+  color: var(--gold);
+  background: rgba(0,0,0,0.25);
+}
+
+.cert-desc{
+  margin: 10px 0 8px;
+  font-size:0.9rem;
+  opacity:0.95;
+}
+
+.cert-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:0.78rem;
+  opacity:0.90;
+}
+
+.cert-meta span{
+  padding: 4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.16);
+}
+
+.cert-actions{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+.link-list a{
+  color: var(--gold);
+  text-decoration:none;
+  border-bottom: 1px dashed rgba(255,215,0,0.40);
+}
+
+.link-list a:hover{
+  border-bottom-color: rgba(255,215,0,0.90);
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.section-contact .contact-form{
+  display:grid;
+  gap:10px;
+  max-width:480px;
+}
+
+.contact-form label{
+  display:flex;
+  flex-direction:column;
+  font-size:0.9rem;
+  gap:4px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  background: rgba(10, 12, 25, 0.90);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius:8px;
+  padding: 6px 8px;
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color: rgba(255,215,0,0.80);
+}
+
+.contact-form button{
+  margin-top:4px;
+  padding: 8px 12px;
+  border-radius:999px;
+  border:none;
+  font-size:0.9rem;
+  cursor:not-allowed;
+  background: rgba(255,255,255,0.10);
+  color:#ccc;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer{
+  text-align:center;
+  padding: 16px 10px 22px;
+  background:#03040a;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size:0.78rem;
+  opacity:0.90;
+}
+
+.footer-quote{
+  margin-top:6px;
+  font-style:italic;
+  opacity:0.85;
+}
+
+/* =========================
+   ALK Rotating Sun (optional wrapper)
+   ========================= */
+
+.alk-logo-wrapper{
+  position:relative;
+  display:inline-flex;
+}
+
+.alk-logo-wrapper::before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #ffdd99aa 0%, transparent 70%);
+  border-radius:50%;
+  z-index:-2;
+  animation: sunGlow 6s ease-in-out infinite alternate;
+}
+
+.alk-logo-wrapper::after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #ffdd9966 45deg,
+    transparent 90deg,
+    #ffdd9966 135deg,
+    transparent 180deg,
+    #ffdd9966 225deg,
+    transparent 270deg,
+    #ffdd9966 315deg,
+    transparent 360deg
+  );
+  border-radius:50%;
+  z-index:-3;
+  opacity:0.45;
+  animation: spiralRotation 18s linear infinite;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes sunPulse{
+  0% { transform: scale(1); opacity:0.50; }
+  50% { transform: scale(1.15); opacity:0.85; }
+  100% { transform: scale(1); opacity:0.50; }
+}
+
+@keyframes bgDrift{
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-18px,16px,0); }
+}
+
+@keyframes sunGlow{
+  0% { opacity:0.45; transform: translate(-50%,-50%) scale(0.95); }
+  100% { opacity:0.85; transform: translate(-50%,-50%) scale(1); }
+}
+
+@keyframes spiralRotation{
+  0% { transform: translate(-50%,-50%) rotate(0deg); }
+  100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px){
+  .section-grid .grid-cards{
     grid-template-columns: 1fr;
+  }
+
+  .section-certificates .cert-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .site-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  /* ✅ مثل الصورة: النافبار بالوسط على الموبايل */
+  .logo-area{
+    width:100%;
+    justify-content:center;
+  }
+
+  .main-nav{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-section{
+    padding-top:60px;
+  }
+
+  .hero-content h1{
+    font-size:1.6rem;
   }
 }
