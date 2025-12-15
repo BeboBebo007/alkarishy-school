@@ -1,94 +1,82 @@
-/* =============================
-   ALK-Sentinel Prime — Royal Theme
-   Black-Gold Official Template
-   © 2025 Alkarishy — ALK 🜂
-============================== */
+/* ======= CERTIFICATES ======= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: #e5e5e5;
-    overflow-x: hidden;
+.section-certificates .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
 }
 
-/* Golden Glow */
-:root {
-    --gold: #d4af37;
+.cert-card {
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: radial-gradient(circle at top, rgba(255, 215, 0, 0.10), #050814);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* Background Star (ALK Five-Point Star) */
-body::before {
-    content: "";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vmin;
-    height: 70vmin;
-    background: url('https://i.imgur.com/8StqGNP.png') no-repeat center / contain;
-    opacity: 0.06;
-    pointer-events: none;
+.cert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-/* Header Logo */
-.header {
-    text-align: center;
-    padding: 80px 20px 20px;
+.cert-card h3 {
+  margin: 0;
+  font-size: 1rem;
 }
 
-.header h1 {
-    font-size: 3rem;
-    color: var(--gold);
-    letter-spacing: 3px;
-    margin: 0;
-    text-transform: uppercase;
+.cert-badge {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 0, 0.7);
+  color: #ffd700;
+  background: rgba(0, 0, 0, 0.25);
 }
 
-/* Subtitle */
-.header p {
-    font-size: 1.2rem;
-    opacity: 0.7;
-    margin-top: 10px;
+.cert-desc {
+  margin: 10px 0 8px;
+  font-size: 0.9rem;
+  opacity: 0.95;
 }
 
-/* Main Buttons */
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
+.cert-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.78rem;
+  opacity: 0.9;
 }
 
-.menu a {
-    width: 260px;
-    padding: 14px 30px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    border-radius: 8px;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: 0.25s ease-in-out;
-    background: rgba(255,255,255,0.03);
+.cert-meta span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.menu a:hover {
-    background: var(--gold);
-    color: #000;
-    transform: scale(1.05);
+.cert-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    opacity: 0.4;
-    font-size: 0.9rem;
-    margin-top: 60px;
-    padding-bottom: 40px;
+/* ======= LINKS LIST ======= */
+
+.link-list a {
+  color: #ffd700;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 215, 0, 0.4);
+}
+
+.link-list a:hover {
+  border-bottom-color: rgba(255, 215, 0, 0.9);
+}
+
+/* ======= Responsive Certificates ======= */
+@media (max-width: 800px) {
+  .section-certificates .cert-grid {
+    grid-template-columns: 1fr;
+  }
 }
