@@ -31,6 +31,7 @@ body{
   padding:0;
   font-family:"Tahoma","Arial",sans-serif;
 
+  /* ✅ مثل الصورة: تدرّج عمودي كوني */
   background: linear-gradient(180deg,
     var(--bg-0) 0%,
     var(--bg-1) 22%,
@@ -249,6 +250,7 @@ body{
   margin-bottom:32px;
   padding: 22px 18px;
 
+  /* ✅ مثل الصورة: كتلة داكنة عميقة */
   background: var(--panel);
 
   border-radius:12px;
@@ -585,6 +587,7 @@ body{
     gap:8px;
   }
 
+  /* ✅ مثل الصورة: النافبار بالوسط على الموبايل */
   .logo-area{
     width:100%;
     justify-content:center;
