@@ -1,161 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التواصل – مدرسة الوعي المتكامل – ALK-🜂-2025</title>
-
-    <style>
-        body {
-            margin: 0;
-            background: linear-gradient(150deg, #0b0b10, #161a2c, #1d253e);
-            color: #eaeaea;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.9;
-        }
-
-        header {
-            text-align: center;
-            padding: 70px 20px 40px;
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            color: #f5d37a;
-            margin-bottom: 15px;
-        }
-
-        .symbol {
-            font-size: 3rem;
-            color: #f5d37a;
-            margin-bottom: 12px;
-        }
-
-        nav {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            margin: 0 12px;
-            color: #dcdcdc;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 4px;
-        }
-
-        nav a:hover {
-            border-bottom: 1px solid #f5d37a;
-            color: #f5d37a;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.33);
-        }
-
-        form {
-            margin-top: 30px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            color: #f5d37a;
-            font-size: 1.05rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 18px;
-            border-radius: 8px;
-            border: none;
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            background: #f5d37a;
-            color: #000;
-            font-size: 1.1rem;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background: #ffe39e;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدرسة الوعي المتكامل – التواصل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="animated-bg"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-    <header>
-        <div class="symbol">🜂</div>
-        <h1>التواصل</h1>
-        <p>البوابة الرسمية للتواصل مع مدرسة الوعي المتكامل</p>
-    </header>
-
-    <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن المدرسة</a>
-        <a href="books.html">الكتب</a>
-        <a href="scrolls.html">الأسفار</a>
-        <a href="contact.html">التواصل</a>
-    </nav>
-
-    <div class="container">
-        <h2 style="color:#f5d37a;">📬 بيانات الاتصال الرسمية</h2>
-
-        <p>
-            يمكنكم التواصل مع المدرسة عبر البريد الرسمي:<br><br>
-            <strong style="color:#ffd98a;">bassam850@gmail.com</strong>
-        </p>
-
-        <hr style="border: 0; border-top: 1px solid #444; margin: 25px 0;">
-
-        <h2 style="color:#f5d37a;">📝 نموذج مراسلة مباشر</h2>
-
-        <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
-            <label>الاسم الكامل</label>
-            <input type="text" name="name" required>
-
-            <label>البريد الإلكتروني</label>
-            <input type="email" name="email" required>
-
-            <label>الرسالة</label>
-            <textarea name="message" rows="6" required></textarea>
-
-            <button type="submit">إرسال الرسالة</button>
-
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="رسالة جديدة من موقع مدرسة الوعي المتكامل">
-        </form>
-
+  <header class="site-header" id="header">
+    <div class="logo">
+      <div class="pulse-icon"><i class="fas fa-brain"></i></div>
+      <span>ALK 🜂</span>
     </div>
+    <div class="nav-controls">
+      <nav class="main-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="school.html">المدرسة</a>
+        <a href="systems.html">تحليل الأنظمة</a>
+        <a href="projects.html">المشاريع</a>
+        <a href="research.html">مركز الأبحاث</a>
+        <a href="papers.html">الأوراق</a>
+        <a href="quantum.html">الكمومي</a>
+        <a href="contact.html">التواصل</a>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        © 2025 ALKARISHY – School of Integrated Consciousness 🜂
-    </footer>
+  <main>
+    <section class="hero" style="min-height: 40vh;">
+      <div class="hero-content">
+        <h1>التواصل</h1>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container glass-card" style="text-align: center;">
+        <p>تتم المراسلات عبر البريد الإلكتروني فقط، في إطار مهني يقتصر على النقاشات البحثية والتعاون العلمي.</p>
+        
+        <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(212,175,55,0.1); border-radius: 20px; border: 1px solid rgba(212,175,55,0.3);">
+          <i class="fas fa-envelope" style="font-size: 2.5rem; color: #d4af37; margin-bottom: 1rem; display: inline-block;"></i>
+          <p style="font-size: 1.3rem; direction: ltr; unicode-bidi: embed;">research@alkarishy.school</p>
+        </div>
+        
+        <p>يرجى أن تكون الرسائل واضحة ومباشرة، مع تحديد الغرض من التواصل.</p>
+        
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(212,175,55,0.2);">
+          <p style="color: #888; font-size: 0.9rem;">ساعات الرد المتوقعة: خلال 3-5 أيام عمل</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© ALK-🜂-2025 | مدرسة الوعي المتكامل</p>
+    <p>research@alkarishy.school</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
