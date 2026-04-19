@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدرسة الوعي المتكامل – السلسلة التحليلية الصوتية</title>
+  <meta name="description" content="سلسلة صوتية تحليلية تهدف إلى توضيح الأفكار العلمية والاتجاهات البحثية في دراسة الأنظمة المعقدة والذكاء الاصطناعي والأنظمة الكمومية.">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* تنسيق خاص بصفحة البودكاست */
+    .podcast-card {
+      background: linear-gradient(135deg, rgba(30,20,40,0.8), rgba(20,15,30,0.9));
+      border-color: rgba(180,100,200,0.3);
+      transition: all 0.4s ease;
+    }
+    .podcast-card:hover {
+      border-color: #c084fc;
+      box-shadow: 0 0 25px rgba(192,132,252,0.15);
+      transform: translateY(-5px);
+    }
+    .podcast-icon {
+      color: #c084fc !important;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* نسبة 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 16px;
+    }
+    .episode-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .episode-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(25,25,35,0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(192,132,252,0.2);
+      transition: all 0.3s;
+    }
+    .episode-item:hover {
+      border-color: #c084fc;
+      background: rgba(192,132,252,0.05);
+    }
+    .episode-number {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, #c084fc, #9b59b6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0a0a0a;
+    }
+    .episode-info h4 {
+      margin: 0 0 0.3rem 0;
+      color: #c084fc;
+    }
+    .episode-info p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .coming-soon {
+      opacity: 0.6;
+      filter: grayscale(0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="site-header" id="header">
+    <div class="logo">
+      <div class="pulse-icon"><i class="fas fa-brain"></i></div>
+      <span>ALK 🜂</span>
+    </div>
+    <div class="nav-controls">
+      <nav class="main-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="school.html">المدرسة</a>
+        <a href="systems.html">الأنظمة</a>
+        <a href="ai.html">الذكاء الاصطناعي</a>
+        <a href="quantum.html">الكمومي</a>
+        <a href="projects.html">المشاريع</a>
+        <a href="research.html">الأبحاث</a>
+        <a href="papers.html">الأوراق</a>
+        <a href="podcast.html">البودكاست</a>
+        <a href="contact.html">التواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height: 45vh; background: radial-gradient(circle at 30% 10%, #150e1a, #0a0a0f);">
+      <div class="hero-content">
+        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+          <div class="pulse-icon" style="width: 75px; height: 75px; background: linear-gradient(135deg, #c084fc, #9b59b6); animation: pulse 2s ease-in-out infinite;">
+            <i class="fas fa-headphones" style="font-size: 2rem; color: white;"></i>
+          </div>
+        </div>
+        <h1 style="background: linear-gradient(135deg, #c084fc, #d4af37, #c084fc); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;">السلسلة التحليلية الصوتية</h1>
+        <p style="font-size: 1rem; max-width: 700px; margin: 0 auto;">تسجيلات صوتية تهدف إلى توضيح الأفكار العلمية والاتجاهات البحثية المرتبطة بدراسة الأنظمة المعقدة والذكاء الاصطناعي والأنظمة الكمومية.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container podcast-card glass-card">
+        <p>لا تُقدَّم هذه التسجيلات كمحتوى إعلامي، بل كمساحة لشرح الأفكار في صورتها الأولية، وربط المفاهيم النظرية بتأملات تحليلية مبسطة.</p>
+        <p>تساعد هذه الحلقات على تتبع تطور الفهم، وتقديم سياق إضافي للأبحاث المكتوبة، دون الدخول في تفاصيل تقنية.</p>
+        <p>تعكس المواد المعروضة مراحل مختلفة من التفكير، وقد تتغير أو تتطور مع تقدم البحث.</p>
+      </div>
+    </section>
+
+    <!-- الحلقة المميزة: الفيديو المطلوب -->
+    <section class="section highlight">
+      <div class="container">
+        <h2 style="color: #c084fc;">الحلقة المميزة</h2>
+        <div class="podcast-card glass-card" style="padding: 1.5rem;">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/KpZ6bXIlcgg?rel=0" 
+              title="فيديو تحليلي - مدرسة الوعي المتكامل" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div style="text-align: center; margin-top: 1rem;">
+            <span style="background: rgba(192,132,252,0.2); padding: 0.3rem 1rem; border-radius: 40px; font-size: 0.8rem; color: #c084fc;">
+              <i class="fas fa-calendar-alt"></i> 23 مارس، 2026
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قائمة الحلقات القادمة -->
+    <section class="section">
+      <div class="container">
+        <h2>الحلقات القادمة</h2>
+        <div class="episode-list">
+          <div class="episode-item coming-soon">
+            <div class="episode-number">02</div>
+            <div class="episode-info">
+              <h4>الاستقرار والانحراف في الأنظمة المفتوحة</h4>
+              <p>تحليل العلاقة بين البيئة والاستقرار الديناميكي</p>
+              <p style="font-size: 0.75rem; color: #888;"><i class="fas fa-clock"></i> قريباً</p>
+            </div>
+          </div>
+          <div class="episode-item coming-soon">
+            <div class="episode-number">03</div>
+            <div class="episode-info">
+              <h4>الذاكرة كعنصر أساسي في تشكّل الأنماط</h4>
+              <p>دور التجربة والتراكم في فهم الأنظمة</p>
+              <p style="font-size: 0.75rem; color: #888;"><i class="fas fa-clock"></i> قريباً</p>
+            </div>
+          </div>
+          <div class="episode-item coming-soon">
+            <div class="episode-number">04</div>
+            <div class="episode-info">
+              <h4>النماذج الإدراكية في الذكاء الاصطناعي</h4>
+              <p>من المنطق الثابت إلى التعلم التفاعلي</p>
+              <p style="font-size: 0.75rem; color: #888;"><i class="fas fa-clock"></i> قريباً</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© ALK-🜂-2025 | مدرسة الوعي المتكامل</p>
+    <p>research@alkarishy.school</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
