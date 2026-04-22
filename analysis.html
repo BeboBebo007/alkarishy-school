@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-
   <style>
+    /* تنسيق الرادار المتحرك */
     .radar-container {
       display: flex;
       justify-content: center;
@@ -16,7 +16,7 @@
       margin: 1.5rem auto 0 auto;
       position: relative;
     }
-
+    
     .radar {
       position: relative;
       width: 120px;
@@ -25,7 +25,8 @@
       background: rgba(212,175,55,0.05);
       box-shadow: 0 0 20px rgba(212,175,55,0.2);
     }
-
+    
+    /* الحلقات الخارجية النابضة */
     .radar::before {
       content: '';
       position: absolute;
@@ -38,7 +39,7 @@
       border: 1px solid rgba(212,175,55,0.4);
       animation: pulse-ring 2s ease-out infinite;
     }
-
+    
     .radar::after {
       content: '';
       position: absolute;
@@ -51,12 +52,21 @@
       border: 1px solid rgba(212,175,55,0.2);
       animation: pulse-ring 2s ease-out infinite 0.5s;
     }
-
+    
     @keyframes pulse-ring {
-      0% { width: 100%; height: 100%; opacity: 0.6; }
-      100% { width: 180%; height: 180%; opacity: 0; }
+      0% {
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+      }
+      100% {
+        width: 180%;
+        height: 180%;
+        opacity: 0;
+      }
     }
-
+    
+    /* قرص الرادار الأساسي */
     .radar-disk {
       position: absolute;
       top: 50%;
@@ -69,7 +79,8 @@
       overflow: hidden;
       border: 1px solid rgba(212,175,55,0.3);
     }
-
+    
+    /* الخطوط الدائرية للرادار */
     .radar-grid {
       position: absolute;
       top: 50%;
@@ -80,7 +91,8 @@
       border-radius: 50%;
       background: repeating-radial-gradient(circle, transparent, transparent 15px, rgba(212,175,55,0.15) 15px, rgba(212,175,55,0.15) 16px);
     }
-
+    
+    /* الخطوط المتقاطعة */
     .radar-cross {
       position: absolute;
       top: 50%;
@@ -89,28 +101,29 @@
       width: 80px;
       height: 80px;
     }
-
+    
     .radar-cross::before,
     .radar-cross::after {
       content: '';
       position: absolute;
       background: rgba(212,175,55,0.2);
     }
-
+    
     .radar-cross::before {
       top: 50%;
       left: 0;
       width: 100%;
       height: 1px;
     }
-
+    
     .radar-cross::after {
       top: 0;
       left: 50%;
       width: 1px;
       height: 100%;
     }
-
+    
+    /* ذراع المسح الدوار */
     .radar-sweep {
       position: absolute;
       top: 50%;
@@ -122,12 +135,17 @@
       border-radius: 0 0 100% 0;
       animation: sweep 4s linear infinite;
     }
-
+    
     @keyframes sweep {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
-
+    
+    /* النقطة المركزية النابضة */
     .radar-center {
       position: absolute;
       top: 50%;
@@ -141,12 +159,19 @@
       animation: center-pulse 1.5s ease-in-out infinite;
       box-shadow: 0 0 8px #d4af37;
     }
-
+    
     @keyframes center-pulse {
-      0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(0.8); }
-      50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+      0%, 100% {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+      }
     }
-
+    
+    /* نقاط صغيرة متحركة على الرادار (محاكاة لأهداف) */
     .blip {
       position: absolute;
       width: 4px;
@@ -156,134 +181,121 @@
       opacity: 0;
       animation: blip-appear 3s ease-in-out infinite;
     }
-
+    
     @keyframes blip-appear {
-      0% { opacity: 0; transform: scale(0); }
-      20% { opacity: 1; transform: scale(1); }
-      80% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0); }
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      20% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      80% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
     }
-
+    
     .blip-1 { top: 25%; left: 60%; animation-delay: 0.5s; }
     .blip-2 { top: 65%; left: 35%; animation-delay: 1.2s; }
     .blip-3 { top: 45%; left: 70%; animation-delay: 2s; }
     .blip-4 { top: 75%; left: 55%; animation-delay: 2.5s; }
   </style>
 </head>
-
 <body>
-<div class="animated-bg"></div>
-<div class="progress-bar" id="progressBar"></div>
+  <div class="animated-bg"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<header class="site-header">
-  <div class="logo">
-    <div class="pulse-icon"><i class="fas fa-brain"></i></div>
-    <span>ALK 🜂</span>
-  </div>
+  <header class="site-header" id="header">
+    <div class="logo">
+      <div class="pulse-icon"><i class="fas fa-brain"></i></div>
+      <span>ALK 🜂</span>
+    </div>
+    <div class="nav-controls">
+      <nav class="main-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="school.html">المدرسة</a>
+        <a href="systems.html">الأنظمة</a>
+        <a href="ai.html">الذكاء الاصطناعي</a>
+        <a href="quantum.html">الكمومي</a>
+        <a href="projects.html">المشاريع</a>
+        <a href="research.html">الأبحاث</a>
+        <a href="papers.html">الأوراق</a>
+        <a href="podcast.html">البودكاست</a>
+        <a href="contact.html">التواصل</a>
+      </nav>
+    </div>
+  </header>
 
-  <nav class="main-nav">
-    <a href="index.html">الرئيسية</a>
-    <a href="school.html">المدرسة</a>
-    <a href="systems.html">الأنظمة</a>
-    <a href="ai.html">الذكاء الاصطناعي</a>
-    <a href="quantum.html">الكمومي</a>
-    <a href="projects.html">المشاريع</a>
-    <a href="research.html">الأبحاث</a>
-    <a href="papers.html">الأوراق</a>
-    <a href="podcast.html">البودكاست</a>
-    <a href="contact.html">التواصل</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero" style="min-height: 50vh;">
-  <div class="hero-content">
-    <h1>تحليل الأنظمة المعقدة</h1>
-
-    <div class="radar-container">
-      <div class="radar">
-        <div class="radar-disk">
-          <div class="radar-grid"></div>
-          <div class="radar-cross"></div>
-          <div class="radar-sweep"></div>
+  <main>
+    <section class="hero" style="min-height: 50vh;">
+      <div class="hero-content">
+        <h1>تحليل الأنظمة المعقدة</h1>
+        
+        <!-- الرادار المتحرك -->
+        <div class="radar-container">
+          <div class="radar">
+            <div class="radar-disk">
+              <div class="radar-grid"></div>
+              <div class="radar-cross"></div>
+              <div class="radar-sweep"></div>
+            </div>
+            <div class="radar-center"></div>
+            <!-- نقاط الأهداف المتحركة -->
+            <div class="blip blip-1"></div>
+            <div class="blip blip-2"></div>
+            <div class="blip blip-3"></div>
+            <div class="blip blip-4"></div>
+          </div>
         </div>
-        <div class="radar-center"></div>
-        <div class="blip blip-1"></div>
-        <div class="blip blip-2"></div>
-        <div class="blip blip-3"></div>
-        <div class="blip blip-4"></div>
+        
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #d4af77;">مسح ديناميكي للأنظمة · تتبع الأنماط والتدفق</p>
       </div>
-    </div>
+    </section>
 
-    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #d4af77;">
-      إطار تحليلي للأنظمة المعقدة · كشف الانحراف · فهم السلوك غير الخطي
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container glass-card">
-
-    <p>
-      يقدّم هذا القسم إطارًا تحليليًا موحدًا لدراسة الأنظمة المعقدة وغير الخطية، يعتمد على فهم النظام كعملية ديناميكية مستمرة بدلاً من حالة ثابتة.
-    </p>
-
-    <p>
-      يهدف هذا الإطار إلى كشف الأنماط الخفية، وتحليل الانحراف البنيوي، وفهم كيفية تطور الأنظمة تحت تأثير التفاعل بين مكوناتها الداخلية والبيئة.
-    </p>
-
-    <p>
-      يعتمد التحليل على ثلاث طبقات مترابطة: <strong>النمط، التدفق، والذاكرة</strong>.
-    </p>
-
-    <ul>
-      <li>كشف الانحراف البنيوي</li>
-      <li>تحليل عدم الاستقرار</li>
-      <li>فهم الأنظمة غير الخطية</li>
-      <li>استخلاص مؤشرات تنبؤية</li>
-    </ul>
-
-    <p>
-      هذا الإطار جزء من <strong>Unified Control Architecture</strong>.
-    </p>
-
-  </div>
-</section>
-
-<section class="section highlight">
-  <div class="container">
-    <h2>عناصر التحليل</h2>
-
-    <div style="display:flex; gap:1.5rem;">
-
-      <div class="card">
-        <i class="fas fa-chart-pie"></i>
-        <h3>النمط</h3>
-        <p>كشف البنى المتكررة</p>
+    <section class="section">
+      <div class="container glass-card">
+        <p>يركّز هذا القسم على دراسة الأنظمة المعقدة من منظور ديناميكي، حيث يُنظر إلى النظام كعملية مستمرة بدلاً من كونه حالة ثابتة.</p>
+        <p>يعتمد التحليل على ثلاثة عناصر مترابطة: <strong>النمط، التدفق، والذاكرة</strong>، والتي تشكل البنية الأساسية لفهم تطور النظام عبر الزمن.</p>
+        <p>يتم دراسة الاستقرار كحالة توازن متغيرة، تتأثر بالعوامل الداخلية والتفاعل مع البيئة والانحرافات التراكمية.</p>
+        <p>يمثل هذا الإطار الأساس الذي تُبنى عليه الامتدادات البحثية في الذكاء الاصطناعي والأنظمة الفيزيائية.</p>
       </div>
+    </section>
 
-      <div class="card">
-        <i class="fas fa-water"></i>
-        <h3>التدفق</h3>
-        <p>دراسة الحركة</p>
+    <section class="section highlight">
+      <div class="container">
+        <h2>عناصر التحليل</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+          <div class="card" style="flex: 1; text-align: center;">
+            <i class="fas fa-chart-pie" style="font-size: 2rem; color: #d4af37;"></i>
+            <h3>النمط</h3>
+            <p>تحليل البنية المتكررة والتشكيلات</p>
+          </div>
+          <div class="card" style="flex: 1; text-align: center;">
+            <i class="fas fa-water" style="font-size: 2rem; color: #d4af37;"></i>
+            <h3>التدفق</h3>
+            <p>دراسة الحركة والتغير المستمر</p>
+          </div>
+          <div class="card" style="flex: 1; text-align: center;">
+            <i class="fas fa-microchip" style="font-size: 2rem; color: #d4af37;"></i>
+            <h3>الذاكرة</h3>
+            <p>تأثير الماضي على تشكّل الحاضر</p>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="card">
-        <i class="fas fa-microchip"></i>
-        <h3>الذاكرة</h3>
-        <p>تأثير الماضي</p>
-      </div>
+  <footer class="site-footer">
+    <p>© ALK-🜂-2025 | مدرسة الوعي المتكامل</p>
+    <p>research@alkarishy.school</p>
+  </footer>
 
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <p>© ALK-🜂-2025</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
