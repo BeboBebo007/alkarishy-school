@@ -1,103 +1,1686 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مدرسة الوعي المتكامل – الرئيسية</title>
-  <meta name="description" content="إطار بحثي لدراسة الأنظمة المعقدة والوعي والاستقرار الديناميكي">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="animated-bg"></div>
-  <div class="progress-bar" id="progressBar"></div>
 
-  <header class="site-header" id="header">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    School of Integrated Consciousness | Bassam Alkarishy
+  </title>
+
+  <meta
+    name="description"
+    content="School of Integrated Consciousness — an independent research initiative founded by Bassam Alkarishy, exploring artificial intelligence, complex systems, memory, decision isolation, consciousness, time and dynamic stability."
+  >
+
+  <meta
+    name="keywords"
+    content="Bassam Alkarishy, School of Integrated Consciousness, Decision Isolation, Decision Independence, Memory-Driven AI, AI Safety, Trustworthy AI, Complex Systems, Consciousness, Artificial Intelligence"
+  >
+
+  <meta name="author" content="Bassam Alkarishy">
+
+  <meta property="og:title"
+        content="School of Integrated Consciousness | Bassam Alkarishy">
+
+  <meta property="og:description"
+        content="Independent research in artificial intelligence, complex systems, consciousness, time, memory and decision architecture.">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url"
+        content="https://alkarishy.school/">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <style>
+
+    :root {
+      --gold: #d4af37;
+      --gold-soft: #b8952e;
+      --gold-dark: #6f5b18;
+
+      --black: #050505;
+      --black-soft: #0c0c0c;
+
+      --panel: #111111;
+      --panel-soft: #181818;
+
+      --text: #eeeeee;
+      --muted: #a8a8a8;
+
+      --border: rgba(212, 175, 55, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(212,175,55,0.08),
+          transparent 35%
+        ),
+        var(--black);
+
+      color: var(--text);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      line-height: 1.7;
+
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 0;
+      height: 4px;
+
+      background: var(--gold);
+
+      z-index: 9999;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 18px 5%;
+
+      background: rgba(5, 5, 5, 0.94);
+
+      border-bottom:
+        1px solid rgba(212, 175, 55, 0.25);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      color: var(--gold);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.8rem;
+      font-weight: 700;
+
+      white-space: nowrap;
+    }
+
+    .pulse-icon {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      color: var(--black);
+
+      box-shadow:
+        0 0 18px rgba(212, 175, 55, 0.32);
+
+      animation: pulse 2.6s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.07);
+      }
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap: 8px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+
+      color: #d8d8d8;
+
+      padding: 8px 11px;
+
+      border-radius: 18px;
+
+      font-size: 0.92rem;
+
+      transition: 0.25s;
+    }
+
+    .main-nav a:hover {
+      background:
+        rgba(212, 175, 55, 0.12);
+
+      color: var(--gold);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 82vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 80px 20px 60px;
+
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 600px;
+      height: 600px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(212,175,55,0.09),
+          transparent 65%
+        );
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      width: min(100%, 920px);
+    }
+
+    .hero-kicker {
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      font-size: 0.9rem;
+
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+
+      color: var(--gold);
+
+      font-size:
+        clamp(2.4rem, 7vw, 5.3rem);
+
+      line-height: 1.08;
+
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 760px;
+
+      margin:
+        0 auto 26px;
+
+      color: #cccccc;
+
+      font-size:
+        clamp(1rem, 2.3vw, 1.25rem);
+    }
+
+    .hero-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+    .hero-tags span {
+      color: var(--gold);
+
+      border:
+        1px solid var(--border);
+
+      background:
+        rgba(212, 175, 55, 0.06);
+
+      border-radius: 28px;
+
+      padding: 10px 18px;
+
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .section {
+      padding: 78px 20px;
+    }
+
+    .container {
+      width: min(1120px, 100%);
+
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      color: var(--gold);
+
+      font-family: Georgia, serif;
+
+      font-size:
+        clamp(2rem, 5vw, 3rem);
+
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+
+      max-width: 690px;
+
+      margin: auto;
+    }
+
+    .glass-card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(24,24,24,0.95),
+          rgba(10,10,10,0.95)
+        );
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 30px;
+
+      padding:
+        clamp(24px, 5vw, 48px);
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,0.35);
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    /* =========================
+       FOUNDER
+    ========================= */
+
+    .founder-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(250px, 0.85fr)
+        minmax(280px, 1.6fr);
+
+      gap: 46px;
+
+      align-items: center;
+    }
+
+    .founder-photo-wrap {
+      text-align: center;
+    }
+
+    .founder-photo {
+      width: min(330px, 100%);
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      object-position: center 18%;
+
+      border-radius: 50%;
+
+      border:
+        5px solid var(--gold);
+
+      box-shadow:
+        0 0 0 12px rgba(212,175,55,0.06),
+        0 0 40px rgba(212,175,55,0.24);
+
+      background: #eee;
+    }
+
+    .founder-text h2 {
+      color: var(--gold);
+
+      font-size:
+        clamp(2rem, 5vw, 3rem);
+
+      font-family: Georgia, serif;
+
+      margin-bottom: 8px;
+    }
+
+    .founder-role {
+      color: #e4c95c;
+
+      font-weight: 600;
+
+      margin-bottom: 20px;
+    }
+
+    .founder-text p {
+      color: #c5c5c5;
+
+      margin-bottom: 14px;
+    }
+
+    .button-row {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      text-decoration: none;
+
+      padding: 11px 19px;
+
+      border-radius: 26px;
+
+      transition: 0.25s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+
+      color: #000;
+
+      font-weight: 700;
+    }
+
+    .btn-outline {
+      border:
+        1px solid var(--gold);
+
+      color: var(--gold);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       RESEARCH RADAR
+    ========================= */
+
+    .radar-layout {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 45px;
+
+      align-items: center;
+    }
+
+    .radar-wrap {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 20px;
+    }
+
+    .radar {
+      position: relative;
+
+      width:
+        min(420px, 85vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(212, 175, 55, 0.45);
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(212,175,55,0.08) 0 2%,
+          transparent 2.5%
+        ),
+        repeating-radial-gradient(
+          circle,
+          transparent 0 19%,
+          rgba(212,175,55,0.18) 20%
+        ),
+        linear-gradient(
+          90deg,
+          transparent 49.7%,
+          rgba(212,175,55,0.22) 50%,
+          transparent 50.3%
+        ),
+        linear-gradient(
+          0deg,
+          transparent 49.7%,
+          rgba(212,175,55,0.22) 50%,
+          transparent 50.3%
+        ),
+        #080808;
+
+      box-shadow:
+        inset 0 0 40px rgba(212,175,55,0.06),
+        0 0 35px rgba(212,175,55,0.1);
+    }
+
+    .radar::before,
+    .radar::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      margin: auto;
+
+      width: 70%;
+      height: 1px;
+
+      background:
+        rgba(212,175,55,0.18);
+
+      transform-origin: center;
+    }
+
+    .radar::before {
+      transform: rotate(45deg);
+    }
+
+    .radar::after {
+      transform: rotate(-45deg);
+    }
+
+    .radar-sweep {
+      position: absolute;
+
+      width: 50%;
+      height: 50%;
+
+      left: 50%;
+      top: 0;
+
+      transform-origin:
+        0% 100%;
+
+      background:
+        conic-gradient(
+          from 270deg,
+          rgba(212,175,55,0.00),
+          rgba(212,175,55,0.28),
+          rgba(212,175,55,0.00) 35deg
+        );
+
+      animation:
+        radarSpin 5s linear infinite;
+    }
+
+    @keyframes radarSpin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .radar-center {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      width: 13px;
+      height: 13px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 18px var(--gold);
+    }
+
+    .radar-dot {
+      position: absolute;
+
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 13px var(--gold);
+
+      animation:
+        dotPulse 2.2s infinite;
+    }
+
+    .dot1 {
+      left: 67%;
+      top: 28%;
+    }
+
+    .dot2 {
+      left: 26%;
+      top: 42%;
+    }
+
+    .dot3 {
+      left: 60%;
+      top: 69%;
+    }
+
+    .dot4 {
+      left: 41%;
+      top: 20%;
+    }
+
+    .dot5 {
+      left: 77%;
+      top: 51%;
+    }
+
+    @keyframes dotPulse {
+      0%, 100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.25);
+      }
+    }
+
+    .radar-copy h3 {
+      color: var(--gold);
+
+      font-size: 2rem;
+
+      margin-bottom: 15px;
+    }
+
+    .radar-copy p {
+      color: #bbbbbb;
+
+      margin-bottom: 20px;
+    }
+
+    .radar-list {
+      list-style: none;
+
+      display: grid;
+
+      gap: 12px;
+    }
+
+    .radar-list li {
+      padding: 13px 16px;
+
+      border-left:
+        2px solid var(--gold);
+
+      background:
+        rgba(212,175,55,0.045);
+
+      border-radius: 6px 18px 18px 6px;
+
+      color: #d4d4d4;
+    }
+
+    /* =========================
+       RESEARCH CARDS
+    ========================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .card {
+      text-decoration: none;
+
+      display: block;
+
+      background:
+        linear-gradient(
+          145deg,
+          #171717,
+          #0c0c0c
+        );
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 28px;
+
+      padding: 34px 25px;
+
+      text-align: center;
+
+      transition:
+        transform 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(212,175,55,0.78);
+
+      box-shadow:
+        0 18px 35px rgba(0,0,0,0.35);
+    }
+
+    .card i {
+      color: var(--gold);
+
+      font-size: 2.5rem;
+
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--gold);
+
+      margin-bottom: 12px;
+
+      font-size: 1.45rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       DECISION ISOLATION
+    ========================= */
+
+    .concept-box {
+      text-align: center;
+    }
+
+    .concept-box h2 {
+      color: var(--gold);
+
+      font-family: Georgia, serif;
+
+      font-size:
+        clamp(2rem, 5vw, 3.2rem);
+
+      margin-bottom: 20px;
+    }
+
+    .concept-box p {
+      color: #c2c2c2;
+
+      max-width: 830px;
+
+      margin:
+        0 auto 18px;
+    }
+
+    .concept-pills {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .concept-pills span {
+      border:
+        1px solid var(--border);
+
+      border-radius: 25px;
+
+      padding: 10px 16px;
+
+      color: var(--gold);
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 16px;
+    }
+
+    .links a {
+      text-decoration: none;
+
+      color: var(--gold);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(212,175,55,0.11),
+          rgba(212,175,55,0.04)
+        );
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 24px;
+
+      padding: 17px 20px;
+
+      text-align: center;
+
+      transition: 0.25s;
+    }
+
+    .links a:hover {
+      background:
+        rgba(212,175,55,0.15);
+
+      transform:
+        translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .site-footer {
+      text-align: center;
+
+      padding:
+        55px 20px 70px;
+
+      color: #777;
+
+      border-top:
+        1px solid rgba(212,175,55,0.15);
+    }
+
+    .site-footer p {
+      margin: 5px 0;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .site-header {
+        flex-direction: column;
+
+        align-items: center;
+
+        padding:
+          15px 16px;
+      }
+
+      .main-nav {
+        justify-content: center;
+      }
+
+      .founder-grid,
+      .radar-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-text {
+        text-align: center;
+      }
+
+      .button-row {
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .logo {
+        font-size: 1.45rem;
+      }
+
+      .pulse-icon {
+        width: 43px;
+        height: 43px;
+      }
+
+      .main-nav a {
+        font-size: 0.8rem;
+
+        padding:
+          6px 8px;
+      }
+
+      .hero {
+        min-height: 72vh;
+
+        padding-top: 55px;
+      }
+
+      .section {
+        padding:
+          58px 16px;
+      }
+
+      .glass-card {
+        border-radius: 24px;
+      }
+
+      .founder-photo {
+        width: 245px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div
+    class="progress-bar"
+    id="progressBar">
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
     <div class="logo">
-      <div class="pulse-icon"><i class="fas fa-brain"></i></div>
-      <span>ALK 🜂</span>
+
+      <div class="pulse-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+
+      <span>△ ALK</span>
+
     </div>
-    <div class="nav-controls">
-      <nav class="main-nav">
-        <a href="./Home.html">🏠 الرئيسية</a>
-        <a href="./school.html">🏫 المدرسة</a>
-        <a href="./analysis.html">⚙️ تحليل الأنظمة</a>
-        <a href="./ai.html">🤖 الذكاء الاصطناعي</a>
-        <a href="./Quantum.html">⚛️ الكمومي</a>
-        <a href="./Projects.html">📁 المشاريع</a>
-        <a href="./research.html">🔬 الأبحاث</a>
-        <a href="./papers.html">📄 الأوراق</a>
-        <a href="./Podcast.html">🎙️ البودكاست</a>
-        <a href="./contact.html">📞 التواصل</a>
-      </nav>
-    </div>
+
+
+    <nav class="main-nav">
+
+      <a href="./Home.html">
+        Home
+      </a>
+
+      <a href="#founder">
+        Founder
+      </a>
+
+      <a href="./school.html">
+        School
+      </a>
+
+      <a href="./analysis.html">
+        Systems
+      </a>
+
+      <a href="./ai.html">
+        AI
+      </a>
+
+      <a href="./Quantum.html">
+        Quantum
+      </a>
+
+      <a href="./Projects.html">
+        Projects
+      </a>
+
+      <a href="./research.html">
+        Research
+      </a>
+
+      <a href="./papers.html">
+        Papers
+      </a>
+
+      <a href="./Podcast.html">
+        Podcast
+      </a>
+
+      <a href="./contact.html">
+        Contact
+      </a>
+
+    </nav>
+
   </header>
 
+
   <main>
+
+
+    <!-- HERO -->
+
     <section class="hero">
+
       <div class="hero-content">
-        <h1>مدرسة الوعي المتكامل</h1>
-        <p>تمثل مدرسة الوعي المتكامل إطاراً بحثياً مستقلاً يركّز على دراسة الأنظمة المعقدة بوصفها عمليات ديناميكية تتشكل عبر الزمن.</p>
+
+        <div class="hero-kicker">
+          Independent Research Initiative
+        </div>
+
+        <h1>
+          School of Integrated Consciousness
+        </h1>
+
+        <p>
+          An independent research framework exploring
+          artificial intelligence, complex systems,
+          memory, decision architecture,
+          consciousness, time and dynamic stability.
+        </p>
+
         <div class="hero-tags">
-          <span><i class="fas fa-database"></i> ذاكرة</span>
-          <span><i class="fas fa-random"></i> انحراف</span>
-          <span><i class="fas fa-chart-line"></i> استقرار</span>
+
+          <span>
+            <i class="fas fa-database"></i>
+            Memory
+          </span>
+
+          <span>
+            <i class="fas fa-shield-alt"></i>
+            Decision Isolation
+          </span>
+
+          <span>
+            <i class="fas fa-chart-line"></i>
+            Dynamic Stability
+          </span>
+
+          <span>
+            <i class="fas fa-brain"></i>
+            Adaptive Intelligence
+          </span>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- FOUNDER -->
+
+    <section
+      class="section"
+      id="founder">
+
+      <div
+        class="container
+               glass-card">
+
+        <div class="founder-grid">
+
+
+          <div class="founder-photo-wrap">
+
+            <!--
+            IMPORTANT:
+            Upload your photograph into the img folder
+            with this exact name:
+            bassam-founder.png
+            -->
+
+            <img
+              class="founder-photo"
+              src="./img/bassam-founder.png"
+              alt="Bassam Alkarishy — Founder of the School of Integrated Consciousness"
+            >
+
+          </div>
+
+
+          <div class="founder-text">
+
+            <div
+              class="gold"
+              style="
+                letter-spacing:.12em;
+                text-transform:uppercase;
+                font-size:.85rem;
+                margin-bottom:8px;
+              ">
+              Founder
+            </div>
+
+            <h2>
+              Bassam Alkarishy
+            </h2>
+
+            <div class="founder-role">
+              Founder of the School of Integrated Consciousness
+            </div>
+
+            <p>
+              Bassam Alkarishy is an independent researcher
+              working across artificial intelligence,
+              complex systems, memory-driven adaptive systems,
+              consciousness, time and meaning.
+            </p>
+
+            <p>
+              His research includes the conceptual framework
+              of <strong>Decision Isolation</strong> and
+              <strong>Decision Independence</strong>
+              for memory-driven artificial intelligence systems.
+            </p>
+
+            <p>
+              The School of Integrated Consciousness
+              serves as an independent framework
+              connecting theoretical research,
+              computational exploration
+              and system-oriented inquiry.
+            </p>
+
+            <div class="button-row">
+
+              <a
+                class="btn btn-gold"
+                href="https://orcid.org/0009-0009-7004-3640"
+                target="_blank">
+                <i class="fab fa-orcid"></i>
+                ORCID
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="https://zenodo.org/records/22861271"
+                target="_blank">
+                <i class="fas fa-file-alt"></i>
+                Research Paper
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RADAR -->
 
     <section class="section">
-      <div class="container glass-card">
-        <p>ينطلق هذا العمل من محاولة فهم العلاقة بين الاستقرار والانحراف، وكيف تتطور الأنظمة تحت تأثير التفاعل المستمر مع البيئة.</p>
-        <p>يمتد هذا الإطار إلى ثلاثة مسارات مترابطة: تحليل الأنظمة المعقدة، النماذج الإدراكية في الذكاء الاصطناعي، واستكشافات نظرية في الأنظمة الكمومية.</p>
-        <p>لا تُطرح هذه المسارات كحقول منفصلة، بل كأجزاء من بنية تحليلية واحدة تهدف إلى فهم كيفية تشكّل السلوك والتغير عبر الزمن.</p>
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Research Radar
+          </h2>
+
+          <p>
+            A visual map of the main research directions
+            currently forming the School's scientific landscape.
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass-card
+                 radar-layout">
+
+
+          <div class="radar-wrap">
+
+            <div class="radar">
+
+              <div class="radar-sweep"></div>
+
+              <div class="radar-center"></div>
+
+              <div
+                class="radar-dot dot1">
+              </div>
+
+              <div
+                class="radar-dot dot2">
+              </div>
+
+              <div
+                class="radar-dot dot3">
+              </div>
+
+              <div
+                class="radar-dot dot4">
+              </div>
+
+              <div
+                class="radar-dot dot5">
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="radar-copy">
+
+            <h3>
+              Active Research Domains
+            </h3>
+
+            <p>
+              The radar represents interconnected research
+              directions rather than isolated disciplines.
+            </p>
+
+            <ul class="radar-list">
+
+              <li>
+                Artificial Intelligence
+                & Memory-Driven Systems
+              </li>
+
+              <li>
+                Decision Isolation
+                & Decision Independence
+              </li>
+
+              <li>
+                Complex Systems
+                & Dynamic Stability
+              </li>
+
+              <li>
+                Consciousness,
+                Time & Meaning
+              </li>
+
+              <li>
+                Quantum
+                & Open-System Exploration
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="section highlight">
-      <div class="container">
-        <h2>المسارات البحثية</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
-          <a href="./analysis.html" class="card" style="flex: 1; text-decoration: none; text-align: center;">
-            <i class="fas fa-cogs" style="font-size: 2rem; color: #d4af37;"></i>
-            <h3>تحليل الأنظمة</h3>
-            <p>دراسة الأنظمة المعقدة كعمليات ديناميكية</p>
-          </a>
-          <a href="./ai.html" class="card" style="flex: 1; text-decoration: none; text-align: center;">
-            <i class="fas fa-robot" style="font-size: 2rem; color: #d4af37;"></i>
-            <h3>الذكاء الاصطناعي</h3>
-            <p>نماذج إدراكية تعتمد على الذاكرة</p>
-          </a>
-          <a href="./Quantum.html" class="card" style="flex: 1; text-decoration: none; text-align: center;">
-            <i class="fas fa-atom" style="font-size: 2rem; color: #d4af37;"></i>
-            <h3>الأنظمة الكمومية</h3>
-            <p>استقرار الحالات في الأنظمة المفتوحة</p>
-          </a>
-        </div>
-      </div>
-    </section>
+
+    <!-- DECISION ISOLATION -->
 
     <section class="section">
+
+      <div
+        class="container
+               glass-card
+               concept-box">
+
+        <h2>
+          Decision Isolation
+          &
+          Decision Independence
+        </h2>
+
+        <p>
+          Memory-driven artificial intelligence systems
+          can accumulate historical context over long periods.
+          This creates a structural question:
+          how can a present decision remain appropriately
+          grounded in the current context
+          rather than being unduly shaped
+          by irrelevant historical influence?
+        </p>
+
+        <p>
+          The Decision Isolation framework introduces
+          a conceptual separation between present decision-making
+          and historical information that is not justified
+          by the current context.
+        </p>
+
+        <div class="concept-pills">
+
+          <span>
+            Memory-Driven AI
+          </span>
+
+          <span>
+            AI Safety
+          </span>
+
+          <span>
+            Trustworthy AI
+          </span>
+
+          <span>
+            Adaptive Systems
+          </span>
+
+          <span>
+            Decision Architecture
+          </span>
+
+        </div>
+
+        <div
+          class="button-row"
+          style="justify-content:center;">
+
+          <a
+            class="btn btn-gold"
+            href="https://zenodo.org/records/22861271"
+            target="_blank">
+
+            <i class="fas fa-book-open"></i>
+
+            Read the Concept Paper
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESEARCH PATHS -->
+
+    <section class="section">
+
       <div class="container">
-        <h2>استكشاف المزيد</h2>
+
+        <div class="section-title">
+
+          <h2>
+            Research Paths
+          </h2>
+
+          <p>
+            The School studies complex adaptive phenomena
+            across several connected domains.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+          <a
+            href="./analysis.html"
+            class="card">
+
+            <i class="fas fa-cogs"></i>
+
+            <h3>
+              Complex Systems
+            </h3>
+
+            <p>
+              Structural and dynamic analysis
+              of evolving systems,
+              stability, drift and interaction.
+            </p>
+
+          </a>
+
+
+          <a
+            href="./ai.html"
+            class="card">
+
+            <i class="fas fa-robot"></i>
+
+            <h3>
+              Artificial Intelligence
+            </h3>
+
+            <p>
+              Memory-driven adaptive intelligence,
+              decision architecture
+              and trustworthy AI.
+            </p>
+
+          </a>
+
+
+          <a
+            href="./Quantum.html"
+            class="card">
+
+            <i class="fas fa-atom"></i>
+
+            <h3>
+              Quantum Systems
+            </h3>
+
+            <p>
+              Exploratory research into
+              stability and state evolution
+              in open quantum systems.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SCHOOL -->
+
+    <section class="section">
+
+      <div
+        class="container
+               glass-card">
+
+        <div class="section-title">
+
+          <h2>
+            The School
+          </h2>
+
+        </div>
+
+        <p
+          style="
+            max-width:820px;
+            margin:auto;
+            text-align:center;
+            color:#bdbdbd;
+          ">
+
+          The School of Integrated Consciousness
+          is an independent research initiative
+          created to investigate how structure,
+          memory, decision, stability,
+          interaction and change
+          shape complex adaptive systems
+          over time.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPLORE -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Explore
+          </h2>
+
+        </div>
+
+
         <div class="links">
-          <a href="./school.html"><i class="fas fa-university"></i> المدرسة</a>
-          <a href="./Podcast.html"><i class="fas fa-headphones"></i> السلسلة الصوتية</a>
-          <a href="./papers.html"><i class="fas fa-file-alt"></i> الأوراق البحثية</a>
-          <a href="./Projects.html"><i class="fas fa-folder-open"></i> جميع المشاريع</a>
-          <a href="./research.html"><i class="fas fa-microscope"></i> مركز الأبحاث</a>
-          <a href="./contact.html"><i class="fas fa-envelope"></i> صفحة التواصل</a>
+
+
+          <a href="#founder">
+            <i class="fas fa-user"></i>
+            Founder
+          </a>
+
+
+          <a href="./school.html">
+            <i class="fas fa-university"></i>
+            The School
+          </a>
+
+
+          <a href="./papers.html">
+            <i class="fas fa-file-alt"></i>
+            Research Papers
+          </a>
+
+
+          <a href="./Projects.html">
+            <i class="fas fa-folder-open"></i>
+            All Projects
+          </a>
+
+
+          <a href="./research.html">
+            <i class="fas fa-microscope"></i>
+            Research Center
+          </a>
+
+
+          <a href="./Podcast.html">
+            <i class="fas fa-headphones"></i>
+            Audio Series
+          </a>
+
+
+          <a
+            href="https://zenodo.org/records/22861271"
+            target="_blank">
+
+            <i class="fas fa-database"></i>
+            Zenodo
+          </a>
+
+
+          <a
+            href="https://orcid.org/0009-0009-7004-3640"
+            target="_blank">
+
+            <i class="fab fa-orcid"></i>
+            ORCID
+          </a>
+
+
+          <a href="./contact.html">
+            <i class="fas fa-envelope"></i>
+            Contact
+          </a>
+
+
         </div>
+
       </div>
+
     </section>
+
+
   </main>
 
+
   <footer class="site-footer">
-    <p>© ALK-🜂-2025 | مدرسة الوعي المتكامل</p>
-    <p>research@alkarishy.school</p>
+
+    <p>
+      © ALK-🜂-2025
+      |
+      School of Integrated Consciousness
+    </p>
+
+    <p>
+      Founder:
+      Bassam Alkarishy
+    </p>
+
+    <p>
+      research@alkarishy.school
+    </p>
+
   </footer>
 
-  <script src="Javascript.js"></script>
+
+  <script>
+
+    const progressBar =
+      document.getElementById("progressBar");
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        const documentHeight =
+          document.documentElement.scrollHeight
+          - window.innerHeight;
+
+        const scrollPosition =
+          window.scrollY;
+
+        const progress =
+          documentHeight > 0
+          ? (scrollPosition / documentHeight) * 100
+          : 0;
+
+        progressBar.style.width =
+          progress + "%";
+
+      }
+    );
+
+  </script>
+
 </body>
 </html>
